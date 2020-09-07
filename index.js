@@ -45,7 +45,7 @@ function formatTweet(tweet) {
 
 io.on('connection', function(socket) {
 
-    T.get('search/tweets', { q: '#babymetal_fanart', count: 100 }, function(err, data, response) {
+    T.get('search/tweets', { q: '(#babymetal_fanart OR #babymetalfanart) filter:images -filter:retweets', count: 200 }, function(err, data, response) {
       var tweetArray=[];
       // console.log('raw tweets', data.statuses);
         for (let index = 0; index < data.statuses.length; index++) {
@@ -81,7 +81,7 @@ io.on('connection', function(socket) {
         io.emit('allTweet',tweetArray)
     })
 
-    var stream = T.stream('statuses/filter', { track: '#babymetal_fanart' })
+    var stream = T.stream('statuses/filter', { track: ['#babymetal_fanart', '#babymetalfanart'] })
 
     stream.on('tweet', function (tweet) {
       
