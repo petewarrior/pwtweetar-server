@@ -1,5 +1,5 @@
-# Twitterstream
-Tweet wall for specific hash tag made using Twitter streaming API
+# PWTweetAR-Server
+Tweet wall for specific hash tag made using Twitter streaming API. Forked from (Twitterstream by divakarvenu)[https://github.com/divakarvenu/Twitterstream].
 
 1. Clone the project 
 
@@ -20,3 +20,5 @@ Tweet wall for specific hash tag made using Twitter streaming API
 ```
 
 5. <code> node index.js </code>
+
+🦊
